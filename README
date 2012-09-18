@@ -1,0 +1,70 @@
+Source Files
+shell.c
+
+----------------------------------------------------------------------------------------------------
+Description
+The shell.c file contains all the source code responsible for executing different commands such as
+
+cd 
+built in commands such as history, path
+fork and exec for other commands if possible
+
+--------------------------------------------------------------------------------------------------
+
+Assumption
+
+If the user passes any arguements after history command, they are ignored
+If the user passes any arguements after exit command, they are ignored
+For executing "cd" command, the user must pass arguements
+A user is not allowed to delete a path that doesn't exist
+A user is not allowed to insert duplicate paths
+
+--------------------------------------------------------------------------------------------------
+
+Test Script
+$ cd
+error: Please provide arguements
+$ cd ..
+$ path + /bin
+$ ls 
+assignment.html  shell	written
+$ history
+[1] path
+[2] cd
+[3] cd ..
+[4] path + /bin
+[5] ls
+$ !5
+assignment.html  shell	written
+$ path - def
+error: def not present
+$ path
+/bin
+$ path + /bin
+error: Duplicate path cannot be inserted /bin
+$ /usr/bin/gcc
+gcc: no input files
+$ !8 
+/bin
+$ history
+[1] path
+[2] cd
+[3] cd ..
+[4] path + /bin
+[5] ls
+[6] ls
+[7] path - def
+[8] path
+[9] path + /bin
+[10] /usr/bin/gcc
+[11] path
+$ !12
+error: The 12 th command is not present in history
+
+
+
+----------------------------------------------------------------------r
+References
+www.stackoverflow.com
+www.wikipedia.com
+

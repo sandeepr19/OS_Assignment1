@@ -1,0 +1,65 @@
+Assignment 1:wq
+
+1.13)
+Following are the two security problems:
+
+Programs and data: For multi programming and time sharing systems, since several users are using the system simultaneously, there is no assurance that files, program and data of user will have privacy.
+
+System resources: When there are several users using the system, there is no guarantee that there will be a specific amount of space or limitations in using system resources.  In this case, there is a great possibility that there will be a shortage in memory and disk space. 
+
+No, we cannot ensure the same degree of security in a time-share machine as we have in a dedicated machine primarily because multiple programs run at the same time in a time sharing machine unlike the dedicated machine whereall the focus is dedicated to one single user. Any protection scheme devised by one user could also be  broken by another user since multiple users can access the system at the same time.
+
+1.24)
+Typically in case of dual mode, when the computer system is executing on behalf of a user application, the system is in user mode. However, when a user application requests a service from the operating system (via a system call), it must transition from user to kernel mode to fulfill the request Thus, an operating system for a machine of this type would need to remain in control or monitor mode all the time. One way of making sure would be to develop in languages, so that all object code is compiler-produced.  Although protection checks cannot be carried out by hardware, the compiler can generate them.
+
+1.30) Features of operating systems
+
+Batch: All jobs with similar requirements are run as a group. Overall performance is improved by keeping CPU and I/O devices busy at all times through buffering, off-line operation, spooling, and multiprogramming.
+
+Interactive: It is composed of short transactions with input and output read/written on the screen. However it is not possible to predict the results and timing of the next transaction.
+
+Time-sharing:  These systems use multiprogramming to provide a better use of the system. The CPU switches rapidly from one user to another.
+    
+Real-time: The system responds to inputs within a fixed amount of time to improve performance. Input is read from sensors.
+    
+Distributed: Computation is divided among several computers. The computers do not share memory or a clock; they communicate with each other over communication lines (e.g., high-speed bus, telephone line).
+    
+Hand held: These devices are easily portable and comfortable to use with the advent of networks. However they have smaller processes and much smaller memory. Handheld computers can synchronize with PCs to allow very portable use of company information. Handheld PDAs can also connect to wireless networks
+    
+Clustered: a clustered operating system is a multiple CPU system and unlike multiprocessor systems, they gather together multiple CPU’s to accomplish computational work. Clustered systems provide high availability service, that is service will continue even if one or more systems in the cluster fail
+    
+Parallel:  parallel operating system works by dividing sets of calculations into smaller parts and distributing them between the machines on a network.
+    
+Network: A network operating system is an operating system that provides features such as file sharing across the network and includes a communication scheme that allows different processes on different computers to exchange messages.
+
+
+
+
+1.31) tradeoffs inherent in hand held
+    
+Advantages:
+Portability: Hand held devices are easily portable and can be used with comfort while travelling thus giving a person access to important information such as news.
+Leisure: With the availability of networks, they can be used to download movies, music while travelling or while performing any outdoor activity.
+
+Disadvantages
+ 1) Small memory:  Amount of physical memory on a hand held device is between 1Mb and 1 Gb which in contrast is very less as compared to Pc and workstations. This makes it important for the operating system to manage memory efficiently
+ 2) Slower processors: Due to the absence of larger batteries, these devices have slower processors.
+
+2.10) 
+
+Devices such as cellular phones as well as hand held devices do not have a disk with file system. In these cases, the operating system is stored in firmware. Typically, the firmware would contain all the code necessary for booting the machine. However, it can get tough to safely upgrade firmware and hence it is advisable to keep immutable code on firmware.
+
+2.16) 
+
+There is great similarity between I/O devices and files. Hence many operating systems including UNIX, merge the two into a combined file–device structure. In this case, a set of system calls is used on both files and devices.
+Advantage: Each device can be accessed as though it was a ﬁle in the ﬁle system. This is of great help to the implementation of user code which can be used to access devices and files in the same manner and device-driver code, which can be written to support a well-deﬁned API.
+Disadvantage: Using the same interface might result in compromising on the functionality or performance since it would be difficult to capture the functionality of certain devices in context of file
+
+2.23) 
+
+With the help of a virtual-machine architecture, a user can have multiple operating systems run on the same system. This allows in debugging and solving security problems easily. It also helps the operating system designer to do research on operating systems and see how they work together and against each other. Operating systems are large and complex programs, and it is difficult to be sure that a change in one part will not cause obscure bugs to appearing some other part. Thus, it is necessary to test all changes to the operating system carefully. The operating system, however, runs on and controls the entire machine. Therefore, the current system must be stopped and taken out of use while changes are made and tested. A virtual-machine system can eliminate much of this problem. Virtual machines thus provide a good platform for operating system research since many different operating systems can run on one physical system.
+
+
+2.24) 
+
+A just in time compiler is used for Java programs for the following reasons. Byte codes are turned into native machine language for the host system, the first time a java method is invoked. These operations are cached. If the method is invoked again, the native machine instructions are used and byte code operations need not be interpreted all over again. Thus, this technique is potentially faster.
